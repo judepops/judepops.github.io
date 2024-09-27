@@ -21,7 +21,7 @@ repository               : "judepops/judepops.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "final_image.png"
+  avatar           : "profile_pic_jp.png"
   name             : "Jude Popham"
   bio              : "Computational Biologist"
   location         : "Oxford, England"
