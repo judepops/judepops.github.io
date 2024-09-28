@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "💭 Welcome to my research portfolio!"
+title: "💭 Welcome to my portfolio!"
 excerpt: "About me"
 author_profile: true
 redirect_from: 
@@ -17,7 +17,14 @@ redirect_from:
 
 🏢 Having developed a strong research portfolio during my Undergraduate degree in Biochemisty and Master's degree in Bioinformatics, I am currnently utilising my robust biological foundation and diverse computational skillset to contribute to early stages in development of Nucleome's drug discovery pipeline. 
 
-# Selected Experience
+# Selected Skills
+
+## Multi-Omics
+- skill 1
+- skill 2 
+
+
+
 
 ## 🤖 Open Source Contributions
 I have experience contributing to [Arena Bench](https://github.com/Arena-Rosnav) a large open-source project for robotic obstacle avoidance using Deep Reinforcement Learning.
