@@ -15,7 +15,7 @@ redirect_from:
 
 🧬 My primary research interests are in multi-omics anlaysis and gene expression regulation. 
 
-🏢 Having developed a strong research portfolio during my Undergraduate degree in Biochemisty and Master's degree in Bioinformatics, I am currnently utilising my robust biological foundation and diverse computational skillset to contribute to early stages in development of Nucleome's drug discovery pipeline. 
+🏢 Having developed a strong research portfolio during my BSc in Biochemisty and MSc in Bioinformatics, I am currently utilising my robust biological foundation and diverse computational skillset to contribute to early stages in development of Nucleome's drug discovery pipeline. 
 
 # Selected Skills
 
