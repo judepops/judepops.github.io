@@ -9,7 +9,7 @@ redirect_from:
 ---
 
 
-![Illustration of combining vision and language modalities](/images/Omics.png){: .align-right width="300px"}
+<img src="/images/Omics.png" alt="Illustration of combining vision and language modalities" style="float: right; width: 300px; margin: 0; padding: 0; border: none;">
 
 🎓 I have recently completed my Master's in Bioinformatics and Theoretical Systems Biology at Imperial College London and I am currently working at Nucleome Therapeutics on a 6-month placement.
 
