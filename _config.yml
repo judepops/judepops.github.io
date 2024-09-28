@@ -8,7 +8,7 @@
 
 # Basic Site Settings
 locale                   : "en-UK"
-title                    : "Jude's Profile"
+title                    : "About"
 title_separator          : "-"
 name                     : &name "Jude Popham"
 description              : &description "Computational Biologist from Imperial College London"
