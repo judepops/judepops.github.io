@@ -80,8 +80,6 @@
   display: table-cell;
   vertical-align: top;
   width: 36px;
-  // set width only, for non-square avatars
-  // height: 36px;
 
   @include breakpoint($large) {
     display: block;
@@ -90,8 +88,10 @@
   }
 
   img {
-    max-width: 175px;
-    border-radius: 50%;
+    width: 175px; /* Set an explicit width */
+    height: 175px; /* Set the height to match the width */
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Ensures the image scales correctly within the circle */
 
     @include breakpoint($large) {
       padding: 5px;
