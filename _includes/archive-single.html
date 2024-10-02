@@ -38,13 +38,39 @@
       <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</p>
     {% endif %}
 
-        {% if post.collection == 'teaching' %}
-          <p> {{ post.type }}, <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
-        {% elsif post.collection == 'publications' %}
-          <p>Published in <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
-        {% elsif post.date %}
-         <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Published:" }}</strong> <time datetime="{{ post.date | default: "1900-01-01" | date_to_xmlschema }}">{{ post.date | default: "1900-01-01" | date: "%B %d, %Y" }}</time></p>
-        {% endif %}
+    {% if post.start_date and post.end_date %}
+      <p class="page__duration">
+        <strong>Duration:</strong> {{ post.start_date | date: "%B %d, %Y" }} - {{ post.end_date | date: "%B %d, %Y" }}
+      </p>
+    {% endif %}
+    
+    {% if post.aims %}
+      <section class="aims">
+        <h3>Aims</h3>
+        <ul>
+          {% for aim in post.aims %}
+          <li>{{ aim }}</li>
+          {% endfor %}
+        </ul>
+      </section>
+    {% endif %}
+    
+    {% if post.read_time %}
+      <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</p>
+    {% endif %}
+
+          {% if post.category == 'teaching' %}
+            <p> {{ post.type }}, <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
+          {% elsif post.category == 'publications' %}
+            <p>Published in <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
+          {% elsif post.category == 'conferences' %}
+            <p>Invited to the <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
+          {% elsif post.category == 'articles' %}
+            <p>Published in <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
+          {% elsif post.date %}
+            <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Published:" }}</strong> <time datetime="{{ post.date | default: "1900-01-01" | date_to_xmlschema }}">{{ post.date | default: "1900-01-01" | date: "%B %d, %Y" }}</time></p>
+          {% endif %}
+      
 
     {% if post.excerpt and site.read_more != 'enabled' %}
     <p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify }}</p>
@@ -52,18 +78,72 @@
     <p class="archive__item-excerpt" itemprop="description"><p>{{ post.excerpt | markdownify | remove: '<p>' | remove: '</p>' }}<strong><a href="{{ base_path }}{{ post.url }}" rel="permalink"> Read more</a></strong></p></p>
     {% endif %}
     
+    {% if post.githuburl %}
+    <p><strong>GitHub Repository:</strong> <a href="{{ post.githuburl }}" target="_blank">{{ post.githuburl }}</a></p>
+    {% endif %}
+
     {% if post.citation and post.paperurl and post.slidesurl %}
-      <p>Recommended citation: {{ post.citation }}<br /><a href="{{ post.paperurl }}">Download Paper</a> | <a href="{{ post.slidesurl }}">Download Slides</a></p>
+      {% if post.category == 'conferences' %}
+        <p><strong>Citation:</strong> {{ post.citation }}<br /><a href="{{ post.paperurl }}">Visit Website</a> | <a href="{{ post.slidesurl }}">Visit Slides</a></p>
+      {% else %}
+        <p><strong>Citation:</strong> {{ post.citation }}<br /><a href="{{ post.paperurl }}">Visit Paper</a> | <a href="{{ post.slidesurl }}">Visit Slides</a></p>
+      {% endif %}
     {% elsif post.citation and post.paperurl %}
-      <p>Recommended citation: {{ post.citation }}<br /><a href="{{ post.paperurl }}">Download Paper</a></p>
+      {% if post.category == 'conferences' %}
+        <p><strong>Citation:</strong> {{ post.citation }}<br /><a href="{{ post.paperurl }}">Visit Website</a></p>
+      {% else %}
+        <p><strong>Citation:</strong> {{ post.citation }}<br /><a href="{{ post.paperurl }}">Visit Paper</a></p>
+      {% endif %}
     {% elsif post.citation and post.slidesurl %}
-      <p>Recommended citation: {{ post.citation }}<br /><a href="{{ post.slidesurl }}">Download Slides</a></p>
+      <p><strong>Citation:</strong> {{ post.citation }}<br /><a href="{{ post.slidesurl }}">Visit Slides</a></p>
     {% elsif post.citation %}
-      <p>Recommended citation: {{ post.citation }}</p>
+      <p><strong>Citation:</strong> {{ post.citation }}</p>
     {% elsif post.paperurl %}
-      <p><a href=" {{ post.paperurl }} ">Download Paper</a></p>
+      {% if post.category == 'conferences' %}
+        <p><a href="{{ post.paperurl }}">Visit Website</a></p>
+      {% else %}
+        <p><a href="{{ post.paperurl }}">Visit Paper</a></p>
+      {% endif %}
     {% elsif post.slidesurl %}
-      <p>Download <a href="{{ post.slidesurl }}">Download Slides</a></p></p>
+      <p><a href="{{ post.slidesurl }}">Visit Slides</a></p>
+    {% endif %}
+
+    {% if post.skills %}
+      <section class="skills-section">
+        <h3>Skills and Tools</h3>
+        <table style="width: 100%;">
+          <thead>
+            <tr>
+              <th style="width: 30%;">Task</th> <!-- 30% width for the Task column -->
+              <th style="width: 70%;">Packages/Tools</th> <!-- 70% width for the Packages/Tools column -->
+            </tr>
+          </thead>
+          <tbody>
+            {% for skill in post.skills %}
+            <tr>
+              <td>{{ skill.task }}</td>
+              <td>
+                <ul>
+                  {% for tool in skill.tools %}
+                  <li>{{ tool }}</li>
+                  {% endfor %}
+                </ul>
+              </td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </section>
+    {% endif %}
+  
+  
+  
+
+    {% if post.abstract %}
+      <section class="abstract">
+        <h3>Abstract</h3>
+        <p>{{ post.abstract }}</p>
+      </section>
     {% endif %}
 
   </article>

@@ -8,14 +8,14 @@ main:
   - title: "CV"
     url: /cv/
 
-  - title: "Portfolio"
+  - title: "Research Portfolio"
     url: /portfolio/
 
-  - title: "Publications & Conferences"
+  - title: "Publications, Conferences & Articles"
     url: /publications/
 
-  # - title: "Talks"
-  #   url: /talks/    
+  - title: "Coding Projects"
+    url: /teaching/    
 
   # - title: "Teaching"
   #   url: /teaching/    
