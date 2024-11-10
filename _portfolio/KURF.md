@@ -1,5 +1,5 @@
 ---
-title: "4) Regulation and Biological Functions of Alternative Spilcing in Neurones of the Adult Mouse Visual Cortex"
+title: "Regulation and Biological Functions of Alternative Spilcing in Neurones of the Adult Mouse Visual Cortex"
 start_date: "2022-06-01"
 end_date: "2022-09-01"
 excerpt: "

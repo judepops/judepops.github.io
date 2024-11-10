@@ -1,5 +1,5 @@
 ---
-title: "1) Multi-Omics Pathway-based Data Integration Using Machine Learning and Large Language Models (LLMs)"
+title: "Multi-Omics Pathway-based Data Integration Using Machine Learning and Large Language Models (LLMs)"
 start_date: "2024-03-01"
 end_date: "2024-10-01"
 excerpt: "<br/><img src='/images/multi_omics.png'> \n \n <strong>Figure 1:</strong> General Workflow of the project. Please click the title for more detailed information on results and outcomes."

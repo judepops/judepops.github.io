@@ -1,5 +1,5 @@
 ---
-title: "3) Multi-Omics Data Integration Using Machine Learning and Large Language Models (LLMs)"
+title: "Multi-Omics Data Integration Using Machine Learning and Large Language Models (LLMs)"
 start_date: "2023-01-01"
 end_date: "2023-10-01"
 excerpt: "<br/><img src='/images/atherosclerosis.jpg'> \n \n <strong>Figure 3:</strong> General Workflow of the project. Please click the title for more detailed information on results and outcomes."

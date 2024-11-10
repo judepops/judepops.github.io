@@ -7,9 +7,9 @@ excerpt: 'I contributed to the development of the PyPi PathIntegrate Python pack
 date: 2024-01-09
 venue: 'PLOS Computational Biology'
 contribution: 'Code contribution: Developed sections of the PathIntegrate Python package.'
-paperurl: 'https://doi.org/10.1371/journal.pcbi.1011814'
+paperurl: https://doi.org/10.5281/zenodo.14060723
 githuburl: 'https://github.com/cwieder/PathIntegrate'
-citation: 'Wieder C, Cooke J, Frainay C, et al. (2024). "PathIntegrate: Multivariate Modelling Approaches for Pathway-Based Multi-Omics Data Integration." PLOS Computational Biology. 20(3): e1011814. doi:10.1371/journal.pcbi.1011814.'
+citation: Popham, J., Wieder, C., & Ebbels, T. (2024). cwieder/PathIntegrate: PathIntegrate Unsupervised (v1.0.0). Zenodo. --> 'Wieder C, Cooke J, Frainay C, et al. (2024). "PathIntegrate: Multivariate Modelling Approaches for Pathway-Based Multi-Omics Data Integration." PLOS Computational Biology. 20(3): e1011814. doi:10.1371/journal.pcbi.1011814.'
 ---
 
 **Unsupervised Extension to the PathIntegrate Machine Learning Class:**
