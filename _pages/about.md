@@ -11,7 +11,7 @@ redirect_from:
 
 🎓 I have recently completed my Master's in Bioinformatics and Theoretical Systems Biology at Imperial College London and I am currently working at Nucleome Therapeutics on a 6-month placement.
 
-🧬 My primary research interests are in multi-omics anlaysis and gene expression regulation. 
+🧬 My primary research interests are in the applications of machine learning to multi-omics anlaysis and gene expression regulation. 
 
 🏢 Having developed a strong research portfolio during my BSc in Biochemisty and MSc in Bioinformatics, I am currently utilising my robust biological foundation and diverse computational skillset to contribute to early stages in development of Nucleome's drug discovery pipeline. 
 
