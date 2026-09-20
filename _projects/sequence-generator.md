@@ -1,7 +1,11 @@
 ---
-title: "Sequence Generator Project (Python)"
-collection: teaching
-permalink: /teaching/Sequence_Generator
+title: "Synthetic Promoter Sequence Generator (Python)"
+collection: projects
+category: coding
+type: "Personal project"
+permalink: /projects/sequence-generator
+date: 2023-06-01   # TODO: confirm date
+excerpt: "A Python program that builds a library of 100 synthetic promoter sequences with defined core-promoter motifs and randomised transcription factor binding sites, ready for Golden Gate assembly."
 ---
 
 I developed a Python program to generate synthetic promoter sequences with specific characteristics to simulate and study promoter regulation. The project aimed to help in understanding how different motifs within a promoter region influence transcription.

@@ -2,7 +2,7 @@
 title: "PathIntegrate: Multivariate Modelling Approaches for Pathway-Based Multi-Omics Data Integration"
 collection: projects
 category: publications
-permalink: /projects/2024-01-09-pathintegrate
+permalink: /publication/2024-01-09-pathintegrate
 excerpt: 'I contributed to the development of the PyPi PathIntegrate Python package (included in v1.0.0), a tool for pathway-based multi-omics data integration used in this publication. My contribution has a seperate doi but it is based on this paper from PLOS.'
 date: 2024-01-09
 venue: 'PLOS Computational Biology'

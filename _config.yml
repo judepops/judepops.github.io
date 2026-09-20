@@ -23,10 +23,13 @@ author:
   # Biographic information
   avatar           : "profile_pic_jp.png"
   name             : "Jude Popham"
-  bio              : "Computational Biologist"
-  education        : "Imperial College London"
-  location         : "Oxford/London, England"
-  employer         : "Nucleome Therapeutics"
+  bio              : "Computational Biologist, ex-Nucleome Therapeutics"
+  education        : "DPhil, Oxford"
+  location         : "Oxford, England"
+  employer         : "MRC WIMM Centre"
+  employer_url     : "https://www.imm.ox.ac.uk/research/units-and-centres/mrc-wimm-centre-for-computational-biology"
+  society          : "President, OxVC Network"
+  society_url      : "https://oxfordvcnetwork.com/"
   uri              : # URL
   email            : "judepopham@gmail.com" 
 
@@ -81,6 +84,25 @@ publication_category:
     title: 'Conferences'
   articles:
     title: 'Articles'
+
+# The subsections shown on the /projects/ page, in this order. A file in
+# _projects/ must carry a `category:` matching one of these keys or it
+# will not be rendered.
+project_category:
+  coding:
+    title: 'Coding'
+  protein_design:
+    title: 'Protein Design'
+  genetics:
+    title: 'Genetics'
+
+# The two sections of the Venture Capital tab. `events` renders on
+# /venture-capital/events/ and `research` on /venture-capital/research/.
+venture_category:
+  events:
+    title: 'Events'
+  research:
+    title: 'Quantitative VC Research'
 
 
 # Site Settings
@@ -157,6 +179,7 @@ include:
   - _pages
   - files
 exclude:
+  - _cowork
   - "*.sublime-project"
   - "*.sublime-workspace"
   - .asset-cache
@@ -212,7 +235,10 @@ kramdown:
 
 # These settings control the types of collections used by the template
 collections:
-  teaching:
+  projects:
+    output: true
+    permalink: /:collection/:path/
+  venture:
     output: true
     permalink: /:collection/:path/
   publications:
@@ -249,7 +275,15 @@ defaults:
   # _teaching
   - scope:
       path: ""
-      type: teaching
+      type: projects
+    values:
+      layout: single
+      author_profile: true
+      share: true
+      comments: true
+  - scope:
+      path: ""
+      type: venture
     values:
       layout: single
       author_profile: true

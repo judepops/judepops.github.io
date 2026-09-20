@@ -1,0 +1,24 @@
+---
+layout: archive
+title: "Projects & Relevant Coursework"
+permalink: /projects/
+author_profile: true
+---
+
+{% include base_path %}
+
+<p>Personal projects and university coursework, grouped by subject area. Research
+placements, my MSc thesis work and industry work live on the
+<a href="{{ base_path }}/portfolio/">Research Portfolio</a> page.</p>
+
+{% for category in site.project_category %}
+  {% assign title_shown = false %}
+  {% assign items = site.projects | where: "category", category[0] | sort: "date" | reverse %}
+  {% for post in items %}
+    {% unless title_shown %}
+      <h2>{{ category[1].title }}</h2><hr />
+      {% assign title_shown = true %}
+    {% endunless %}
+    {% include archive-single.html %}
+  {% endfor %}
+{% endfor %}

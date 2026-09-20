@@ -11,3 +11,6 @@ Gemfile.lock
 # Ingore files created by npm
 node_modules
 package-lock.json
+# Working folder: scripts, notes and drafts used to build the site
+# but which are not part of the published site. Never committed.
+_cowork/

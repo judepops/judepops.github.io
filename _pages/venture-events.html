@@ -1,0 +1,19 @@
+---
+layout: archive
+title: "Events"
+permalink: /venture-capital/events/
+author_profile: true
+---
+
+{% include base_path %}
+
+<p>Speaker events, workshops and hackathons run with the
+<a href="https://oxfordvcnetwork.com/" target="_blank">Oxford Venture Capital Network</a>.
+The society's full listing, including upcoming events, is at
+<a href="https://oxfordvcnetwork.com/events/" target="_blank">oxfordvcnetwork.com/events</a>.
+Back to <a href="{{ base_path }}/venture-capital/">Venture Capital</a>.</p>
+
+{% assign items = site.venture | where: "category", "events" | sort: "date" | reverse %}
+{% for post in items %}
+  {% include archive-single.html %}
+{% endfor %}

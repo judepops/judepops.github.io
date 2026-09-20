@@ -1,7 +1,11 @@
 ---
 title: "Raw RNA-Seq Data Analysis Project (R and Unix)"
-collection: teaching
-permalink: /teaching/RNA-Seq_Analysis.md
+collection: projects
+category: genetics
+type: "Personal project"
+permalink: /projects/rna-seq-analysis
+date: 2023-01-01   # TODO: confirm date
+excerpt: "Quality control, differential expression analysis with DESeq2 and gene ontology interpretation of raw RNA-seq reads."
 ---
 
 For this project, I conducted a comprehensive RNA-seq data analysis to explore gene expression differences between experimental groups. First, I carried out quality control checks on the raw sequencing data to assess read quality, using tools such as Rsubread to extract quality scores and visualize them with boxplots. This step ensured that the data was of sufficient quality for reliable downstream analysis.
