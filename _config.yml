@@ -21,17 +21,20 @@ repository               : "judepops/judepops.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile_pic_jp.png"
+  avatar           : "profile-headshot.png"
   name             : "Jude Popham"
   bio              : "Computational Biologist, ex-Nucleome Therapeutics"
-  education        : "DPhil, Oxford"
+  education:
+    - "DPhil Medical Science, Oxford"
+    - "MSc Bioinformatics and Theoretical Systems Biology, ICL"
+    - "BSc Biochemistry, KCL"
   location         : "Oxford, England"
-  employer         : "MRC WIMM Centre"
+  employer         : "MRC WIMM Centre for Computational Biology"
   employer_url     : "https://www.imm.ox.ac.uk/research/units-and-centres/mrc-wimm-centre-for-computational-biology"
-  society          : "President, OxVC Network"
+  society          : "President, Oxford Venture Capital Network"
   society_url      : "https://oxfordvcnetwork.com/"
   uri              : # URL
-  email            : "judepopham@gmail.com" 
+  email            : "jude.popham@gtc.ox.ac.uk"
 
   # Academic websites
   arxiv            : # URL - Update with the correct link to your profile
@@ -61,6 +64,7 @@ author:
   instagram        : # Username
   lastfm           : # Username
   linkedin         : "jude-popham-38809918a/"
+  luma             : "https://luma.com/user/usr-5PqjsnBdpaEgZRZ"
   mastodon         : # URL
   medium           : # URL
   pinterest        : # Username
@@ -89,12 +93,14 @@ publication_category:
 # _projects/ must carry a `category:` matching one of these keys or it
 # will not be rendered.
 project_category:
-  coding:
-    title: 'Coding'
   protein_design:
     title: 'Protein Design'
+  coding:
+    title: 'Coding'
   genetics:
     title: 'Genetics'
+  teaching:
+    title: 'Teaching'
 
 # The two sections of the Venture Capital tab. `events` renders on
 # /venture-capital/events/ and `research` on /venture-capital/research/.
@@ -103,6 +109,18 @@ venture_category:
     title: 'Events'
   research:
     title: 'Quantitative VC Research'
+
+# The tabs on the /portfolio/ page, in this order. A file in _portfolio/ must
+# carry a `category:` matching one of these keys or it will not be rendered.
+portfolio_category:
+  dphil:
+    title: 'DPhil'
+  industry:
+    title: 'Industry'
+  postgrad:
+    title: 'Postgrad'
+  undergrad:
+    title: 'Undergrad'
 
 
 # Site Settings

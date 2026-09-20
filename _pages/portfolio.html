@@ -1,14 +1,81 @@
 ---
 layout: archive
-title: "Portfolio"
+title: "Research Portfolio"
 permalink: /portfolio/
 author_profile: true
 ---
 
 {% include base_path %}
 
-{% assign sorted_portfolio = site.portfolio | sort: 'end_date' | reverse %}
-{% for post in sorted_portfolio %}
-  {% include archive-single.html %}
-{% endfor %}
+<p>My research follows one through-line: <strong>multi-omics</strong>, and using machine
+learning to combine measurements that do not naturally fit together.</p>
 
+<style>
+  /* Small, floated beside the intro text; stacks and centres on narrow screens. */
+  .omics-figure { float: right; width: 170px; max-width: 38%; margin: 0.2em 0 1em 1.5em; }
+  @media (max-width: 600px) {
+    .omics-figure { float: none; display: block; width: 55%; max-width: 55%; margin: 0 auto 1em; }
+  }
+  .omics-clear { clear: both; }
+</style>
+
+<img class="omics-figure" src="{{ base_path }}/images/Omics.png"
+     alt="The omics layers, from genome to metabolome">
+
+<p>It began with <a href="{{ base_path }}/portfolio/KURF/">genomics and splicing</a>, in a
+summer project that grew out of an article I wrote on
+<a href="{{ base_path }}/publication/2021-11-15-paper-title-number-4">alternative splicing and
+neurogenesis</a>. My undergraduate thesis added
+<a href="{{ base_path }}/portfolio/BHF/">transcriptomics and proteomics</a>; my postgraduate year
+added <a href="{{ base_path }}/portfolio/CISBIO/">spatial transcriptomics</a> and then
+<a href="{{ base_path }}/portfolio/NIHR/">metabolomics</a>, the layer that resists integration
+most.</p>
+
+<p>The methods moved with the data. That metabolomics work became a
+<a href="https://github.com/cwieder/PathIntegrate/graphs/contributors" target="_blank">Python
+package</a> built on <strong>multivariate machine learning</strong>, modelling many correlated
+pathway features together rather than testing them one at a time. At
+<a href="{{ base_path }}/portfolio/Nucleome/">Nucleome Therapeutics</a> that became
+<strong>deep learning</strong>: fine-tuning genomic foundation models on chromatin accessibility,
+with the data engineering underneath it on AWS S3 and SageMaker.</p>
+
+<p>The <a href="{{ base_path }}/portfolio/Oxford/">DPhil</a> works a layer further up, in the
+<strong>epigenome</strong>, and draws on all of it: machine learning, deep learning and
+multi-omics applied to gene regulation. Where the industry work was applied, this is the research
+side of the same question, and it is a big-data problem in principle: an assay that resolves
+regulatory contacts to the base pair would, scaled across roughly 20,000 genes in the CD4+ T cell
+genome, give training data of a kind these models have not had.</p>
+
+<p>Grouped by stage below. Personal and laboratory projects are on the
+<a href="{{ base_path }}/projects/">Projects</a> page, and venture capital work on the
+<a href="{{ base_path }}/venture-capital/">Venture Capital</a> page.</p>
+
+<div class="omics-clear"></div>
+
+{% include category-tabs.html %}
+
+<div class="cat-tabs" role="tablist">
+  {% for category in site.portfolio_category %}
+    {% assign n = site.portfolio | where: "category", category[0] | size %}
+    {% if n > 0 %}
+      <button type="button" class="cat-tab" role="tab"
+              id="tab-{{ category[0] }}" aria-controls="panel-{{ category[0] }}"
+              aria-selected="{% if forloop.first %}true{% else %}false{% endif %}">
+        {{ category[1].title }} <span class="cat-count">{{ n }}</span>
+      </button>
+    {% endif %}
+  {% endfor %}
+</div>
+
+{% for category in site.portfolio_category %}
+  {% assign items = site.portfolio | where: "category", category[0] | sort: "end_date" | reverse %}
+  {% if items.size > 0 %}
+    <section class="cat-panel" role="tabpanel"
+             id="panel-{{ category[0] }}" aria-labelledby="tab-{{ category[0] }}">
+      <h2 class="cat-panel-title">{{ category[1].title }}</h2>
+      {% for post in items %}
+        {% include archive-single.html %}
+      {% endfor %}
+    </section>
+  {% endif %}
+{% endfor %}

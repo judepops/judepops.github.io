@@ -7,61 +7,100 @@ author_profile: true
 
 {% include base_path %}
 
-<p>Alongside my research I work across early-stage venture capital: running the venture
-community at Oxford, investing into deep-tech and AI-native companies, and building
-quantitative tools for sourcing and diligence.</p>
+<p>Alongside my research I work across early-stage venture capital: running the venture community
+at Oxford, investing into deep-tech and AI-native companies, and building quantitative tools for
+sourcing and diligence.</p>
 
-<p>
-  <a href="{{ base_path }}/venture-capital/events/"><strong>Events &rarr;</strong></a> &nbsp;&middot;&nbsp;
-  <a href="{{ base_path }}/venture-capital/research/"><strong>Quantitative VC Research &rarr;</strong></a>
-</p>
+{% include category-tabs.html %}
 
-<hr />
+{% assign n_events = site.venture | where: "category", "events" | size %}
+{% assign n_research = site.venture | where: "category", "research" | size %}
 
-<h2>President, Oxford Venture Capital Network</h2>
+<div class="cat-tabs" role="tablist">
+  <button type="button" class="cat-tab" role="tab"
+          id="tab-overview" aria-controls="panel-overview" aria-selected="true">Overview</button>
+  <button type="button" class="cat-tab" role="tab"
+          id="tab-events" aria-controls="panel-events" aria-selected="false">
+    Events <span class="cat-count">{{ n_events }}</span></button>
+  <button type="button" class="cat-tab" role="tab"
+          id="tab-research" aria-controls="panel-research" aria-selected="false">
+    Quantitative VC Research <span class="cat-count">{{ n_research }}</span></button>
+</div>
 
-<p>I am President of the <a href="https://oxfordvcnetwork.com/" target="_blank">Oxford Venture
-Capital Network</a> (OxVCN), Oxford's venture capital society. The Network connects students
-with founders and investors through speaker events, educational VC workshops and its flagship
-Venture Capital Programme, which trains aspiring analysts.</p>
+<section class="cat-panel" role="tabpanel" id="panel-overview" aria-labelledby="tab-overview">
+  <h2 class="cat-panel-title">Overview</h2>
 
-<p>I lead the events programme, using my own and the society's network to bring investors and
-operators to Oxford, and running workshops and hackathons in partnership with other
-university societies. Past and upcoming events are on the
-<a href="{{ base_path }}/venture-capital/events/">Events</a> page.</p>
+  <h2>President, Oxford Venture Capital Network</h2>
 
-<h2>Investor, Proximo Ventures</h2>
+  <p>I am President of the <a href="https://oxfordvcnetwork.com/" target="_blank">Oxford Venture
+  Capital Network</a> (OxVCN), Oxford's venture capital society. The Network connects students
+  with founders and investors through speaker events, educational VC workshops and its flagship
+  Venture Capital Programme, which trains aspiring analysts.</p>
 
-<p>I am an investor at <a href="https://proximo-ventures.com/" target="_blank">Proximo
-Ventures</a>, an early-stage fund backing deep-tech founders out of the top UK universities
-(Oxford, Cambridge and Imperial) across climate tech, life sciences and Industry 4.0.
-The model puts investors on the ground at the universities they cover: sourcing companies,
-running due diligence and working directly with founders.</p>
+  <p>I lead the events programme, using my own and the society's network to bring investors and
+  operators to Oxford, and running workshops and hackathons in partnership with other university
+  societies.</p>
 
-<p>I am also an angel investor in <a href="https://www.assuric.com/" target="_blank">Assuric</a>,
-one of our portfolio companies.</p>
+  <h2>Investor, Proximo Ventures</h2>
 
-<h2>Venture Scout, Ellipsis Ventures</h2>
+  <p>I am an investor at <a href="https://proximo-ventures.com/" target="_blank">Proximo
+  Ventures</a>, an early-stage fund backing deep-tech founders out of the top UK universities
+  (Oxford, Cambridge and Imperial) across climate tech, life sciences and Industry 4.0. The model
+  puts investors on the ground at the universities they cover: sourcing companies, running due
+  diligence and working directly with founders.</p>
 
-<p>I scout for <a href="https://ellipsis-venture.com/" target="_blank">Ellipsis</a>, a
-Zurich-based fund writing first cheques into AI-native companies at pre-seed and seed. Ellipsis
-is led by <a href="https://www.linkedin.com/in/yariv-adan/" target="_blank">Yariv Adan</a>,
-co-founder of Google Assistant and Google Lens across seventeen years at Google, alongside
-founding partners including <a href="https://www.linkedin.com/in/matthiasdantone/" target="_blank">Matthias
-Dantone</a>, and runs its sourcing, diligence and operations on an autonomous agentic system.</p>
+  <p>I am also an angel investor in <a href="https://www.assuric.com/" target="_blank">Assuric</a>,
+  one of our portfolio companies.</p>
 
-<p>The mandate is companies where AI <em>is</em> the product rather than a feature on top of
-one, with defensibility coming from proprietary data and deep domain expertise.</p>
+  <h2>Venture Scout, Ellipsis Ventures</h2>
 
-<h2>Research Intern, Vela Partners</h2>
+  <p>I scout for <a href="https://ellipsis-venture.com/" target="_blank">Ellipsis</a>, a
+  Zurich-based fund writing first cheques into AI-native companies at pre-seed and seed. Ellipsis
+  is led by <a href="https://www.linkedin.com/in/yariv-adan/" target="_blank">Yariv Adan</a>,
+  co-founder of Google Assistant and Google Lens across seventeen years at Google, alongside
+  founding partners including
+  <a href="https://www.linkedin.com/in/matthiasdantone/" target="_blank">Matthias Dantone</a>, and
+  runs its sourcing, diligence and operations on an autonomous agentic system.</p>
 
-<p>I was a research intern at <a href="https://vela.partners/" target="_blank">Vela Partners</a>,
-a San Francisco fund that describes itself as the first product-led, AI-powered venture firm,
-and which publishes much of its AI-for-VC research with the University of Oxford.</p>
+  <p>The mandate is companies where AI <em>is</em> the product rather than a feature on top of
+  one, with defensibility coming from proprietary data and deep domain expertise.</p>
 
-<p>My work there applied quant-finance backtesting discipline (point-in-time data, leakage
-controls, survivorship-free universes, pre-registration) to venture signals: predicting which
-research ideas compound rather than fade, and which founder profiles produce outliers. Vela now
-runs an extended version of the first of these in house as a monthly research-trends product.
-The write-ups are on the
-<a href="{{ base_path }}/venture-capital/research/">Quantitative VC Research</a> page.</p>
+  <h2>Research Intern, Vela Partners</h2>
+
+  <p>I was a research intern at <a href="https://vela.partners/" target="_blank">Vela Partners</a>,
+  a San Francisco fund that describes itself as the first product-led, AI-powered venture firm,
+  and which publishes much of its AI-for-VC research with the University of Oxford.</p>
+
+  <p>My work there applied quant-finance backtesting discipline (point-in-time data, leakage
+  controls, survivorship-free universes, pre-registration) to venture signals: predicting which
+  research ideas compound rather than fade, and which founder profiles produce outliers. Vela now
+  runs an extended version of the first of these in house as a monthly research-trends product.</p>
+</section>
+
+<section class="cat-panel" role="tabpanel" id="panel-events" aria-labelledby="tab-events">
+  <h2 class="cat-panel-title">Events</h2>
+
+  <p>Speaker events, workshops and hackathons run with the
+  <a href="https://oxfordvcnetwork.com/" target="_blank">Oxford Venture Capital Network</a>. The
+  society's full listing, including upcoming events, is at
+  <a href="https://oxfordvcnetwork.com/events/" target="_blank">oxfordvcnetwork.com/events</a>.</p>
+
+  {% assign items = site.venture | where: "category", "events" | sort: "date" | reverse %}
+  {% for post in items %}
+    {% include archive-single.html %}
+  {% endfor %}
+</section>
+
+<section class="cat-panel" role="tabpanel" id="panel-research" aria-labelledby="tab-research">
+  <h2 class="cat-panel-title">Quantitative VC Research</h2>
+
+  <p>Quantitative research on venture signals, built during and after my research internship at
+  <a href="https://vela.partners/" target="_blank">Vela Partners</a>. Every project below applies
+  the same discipline: point-in-time data, a leakage test that fails the build, survivorship-free
+  universes, and hypotheses fixed before scoring.</p>
+
+  {% assign items = site.venture | where: "category", "research" | sort: "date" | reverse %}
+  {% for post in items %}
+    {% include archive-single.html %}
+  {% endfor %}
+</section>

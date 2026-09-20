@@ -84,8 +84,13 @@
     <p><strong>GitHub Repository:</strong> <a href="{{ post.githuburl }}" target="_blank">{{ post.githuburl }}</a></p>
     {% endif %}
 
+    {% if post.citations %}
+    <p class="page__meta"><i class="fa fa-quote-right" aria-hidden="true"></i>
+      Cited {{ post.citations }} times{% if post.citations_source %} ({{ post.citations_source }}){% endif %}</p>
+    {% endif %}
+
     {% if post.pdfurl %}
-    <p><a href="{{ base_path }}{{ post.pdfurl }}" target="_blank">View the submitted PDF</a></p>
+    <p><a href="{{ base_path }}{{ post.pdfurl }}" target="_blank">View the full write-up (PDF)</a></p>
     {% endif %}
 
     {% if post.citation and post.paperurl and post.slidesurl %}

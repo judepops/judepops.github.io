@@ -5,6 +5,8 @@ category: publications
 permalink: /publication/2024-01-09-pathintegrate
 excerpt: 'I contributed to the development of the PyPi PathIntegrate Python package (included in v1.0.0), a tool for pathway-based multi-omics data integration used in this publication. My contribution has a seperate doi but it is based on this paper from PLOS.'
 date: 2024-01-09
+citations: 37
+citations_source: "OpenAlex, September 2026"
 venue: 'PLOS Computational Biology'
 contribution: 'Code contribution: Developed sections of the PathIntegrate Python package.'
 paperurl: https://doi.org/10.5281/zenodo.14060723

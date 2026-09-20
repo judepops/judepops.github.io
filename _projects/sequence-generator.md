@@ -1,8 +1,8 @@
 ---
-title: "Synthetic Promoter Sequence Generator (Python)"
+title: "Python Generation of Synthetic Promoter Libraries with TATA, Inr and TFBS Motifs"
 collection: projects
 category: coding
-type: "Personal project"
+type: "Project"
 permalink: /projects/sequence-generator
 date: 2023-06-01   # TODO: confirm date
 excerpt: "A Python program that builds a library of 100 synthetic promoter sequences with defined core-promoter motifs and randomised transcription factor binding sites, ready for Golden Gate assembly."

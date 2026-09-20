@@ -1,5 +1,5 @@
 ---
-title: "Regulation and Biological Functions of Alternative Spilcing in Neurones of the Adult Mouse Visual Cortex"
+title: "Regulation and Biological Functions of Alternative Splicing in Neurons of the Adult Mouse Visual Cortex"
 start_date: "2022-06-01"
 end_date: "2022-09-01"
 excerpt: "
@@ -7,6 +7,7 @@ excerpt: "
 <embed src='/images/kurf_poster.pdf' width='600' height='400' type='application/pdf' />
 </div> \n \n <strong>Figure 4:</strong> Poster displaying the outcome of this project investigating alternative splicing during Neurogenesis. Please click the title for more detailed information on results and outcomes."
 collection: portfolio
+category: undergrad
 aims:     
 - Process 4 single cell/single nuclear datasets from the Allen Brain Institute in R 
 - Generate high throughput splicing data using specialised tools in Unix (e.g Whippet). 
@@ -14,42 +15,66 @@ aims:
 - Map different isoform profiles of GABAergic and glutamatergic layers
 - Validate the utility of Single-Cell data for splicing analysis compared to Bulk RNA-seq
 skills:
-  - task: "Data Analysis"
+  - task: "Single-cell and Single-nucleus RNA-Seq"
     tools:
-      - "Python, R, Unix"
-  - task: "Single-cell RNA Sequencing"
+      - "Seurat v3 (R)"
+      - "QC, normalisation, PCA, clustering, UMAP, marker genes"
+  - task: "Splicing Quantification"
     tools:
-      - "Scanpy"
-  - task: "Multi-omics Integration"
+      - "Whippet"
+      - "Unix shell pipelines"
+  - task: "Functional Interpretation"
     tools:
-      - "MOFA"
-  - task: "Proteomics"
-    tools:
-      - "MaxQuant"
+      - "Gene ontology enrichment"
 ---
 
-Responsibilities:
-- 4-month Undergraduate Research Project (KCL Biochemistry BSc): ‘Integrative Multi-omics Analysis of Human Carotid Plaque Data Reveals Protective Smooth Muscle Cell Phenotypes’. - This project meta-analysed 3 scRNA-seq datasets to build one of the first comprehensive single-cell transcriptomic atlases of human carotid artery atherosclerosis, extract smooth muscle cell populations and interpret their different phenotypes with transcriptomic and proteomics data through clinically translatable multi-omics analysis.
-- 3-month return offer for part-time work given the quality of research. 
-- The goal of this internship was to contribute to the lab’s publication and to write my own original research manuscript. To create my own manuscript, results had to be validated through further analysis.
+King's Undergraduate Research Fellowship, summer 2022, at the Centre for Developmental
+Neurobiology, King's College London, with Prof. Eugene Makeyev and day-to-day bioinformatics
+mentoring from Dr Fursham Hamid. The project was one I conceptualised and took to the KURF board
+for funding.
 
-Key Goals:
-- R/Python scripting to benchmark and integrate single-cell sequencing data: 70,000 carefully selected cells from datasets uploaded to various public repositories
-- K-Means and Hierarchical cell clustering procedures 
-- Differential gene expression analysis and analysis of proteomic signatures for calcification, sex differences, symptoms and location.
-- Transcriptomics/proteomics data interpretation of 200+ original patient plaque samples.
-- Validation of results: Spatial RNA-seq, Cell-Cell Communication analysis, Bulk Deconvolution techniques. 
+## The question
 
-Achievement:
-- Co-Author for an original research manuscript (7% acceptance rate) published in Circulation (AHA Journals, Vol 133): ‘Proteomic Atlas of Atherosclerosis: The Contribution of Proteoglycans to Sex Differences, Plaque Phenotypes, and Outcomes’
-¬- Collaboration between the Medical University of Vienna and KCL
+Neurons produce many RNA isoforms from a single gene by alternative splicing. Some splicing
+events introduce a premature stop codon, so the transcript is destroyed by nonsense-mediated
+decay, which makes splicing a mechanism for tuning expression rather than only for diversifying
+protein products.
 
-<details>
-  <summary>Click for more info</summary>
-  
-  - **Project Details**: This section provides detailed insights into the implementation process, challenges faced, and results obtained.
-  - **Paper Reference**: "Reward Constrained Policy Optimization" by Tessler et al. can be accessed [here](https://openreview.net/pdf?id=SkfrvsA9FX).
-  - **GitHub Code**: The complete code for this project is available on [GitHub](https://github.com/sudo-Boris/stable-baselines3).
-  - **Article Submission**: Learn more about the theory and results of RCPO in the submitted article [here](https://iclr-blogposts.github.io/staging/blog/2023/Adaptive-Reward-Penalty-in-Safe-Reinforcement-Learning/).
+The idea the project rests on is a consequence of where NMD happens. Because it operates after
+export to the cytoplasm, transcripts targeted by NMD should be **relatively enriched in the
+nucleus**. So comparing single-nucleus against single-cell RNA-seq of the same neuron types
+should flag candidate NMD-regulated exons, without needing to block NMD experimentally.
 
-</details>
+## Data and processing
+
+Matched single-cell and single-nucleus full-length RNA-seq from adult mouse primary visual cortex
+(Bakken et al. 2018, Allen Institute), as four count matrices: cell and nucleus, exon and intron.
+Processing in Seurat v3 covered quality control, normalisation, variable feature selection, PCA,
+clustering, UMAP and marker identification. Splicing was quantified with **Whippet**, using an
+index and wrapper provided by Dr Hamid.
+
+## Findings
+
+Exon counts from cells and nuclei integrated cleanly, and longer exons were enriched in nuclei,
+consistent with incomplete splicing of nascent transcripts still in the nucleus.
+
+Comparing neuron subclasses by gene ontology: L4 neurons were enriched for glutamate receptor
+activity and myosin binding, L5 for scaffold protein and actin binding. Among GABAergic
+interneurons, Pvalb cells were more enriched for GABAergic functions and Sst for glutamatergic,
+with both enriched for cytoskeletal anchoring.
+
+The splicing comparison is the part the project was built for. Of all splicing event types,
+**cassette exons** showed the strongest positive relationship between splicing change and nuclear
+enrichment. That is the expected direction, since cassette exons generate the most NMD-targeted
+transcripts. **Sf3b1** is the worked example: a cassette exon between exons 4 and 5 that
+introduces a premature stop codon, in a splicing factor that regulates its own expression this
+way.
+
+## What this does and does not show
+
+This is a candidate list rather than a result. The splicing analysis used 80 randomly sampled
+cells and nuclei, too few points for a correlation test, so the relationship is reported as a
+visible trend with no coefficient attached. Nuclear enrichment also has explanations other than
+NMD, including nuclear retention and slow export, which this comparison cannot separate.
+
+I also helped run a Centre workshop for Year 12 students using the Allen Brain Atlas.

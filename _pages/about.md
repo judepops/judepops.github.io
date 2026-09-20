@@ -9,7 +9,7 @@ redirect_from:
 ---
 
 
-🎓 I am a DPhil student in Medical Science at the University of Oxford, based at the [MRC WIMM Centre for Computational Biology](https://www.imm.ox.ac.uk/research/units-and-centres/mrc-wimm-centre-for-computational-biology), having previously worked as an ML Computational Biologist at [Nucleome Therapeutics](https://nucleome.com/) and completed my Master's in Bioinformatics and Theoretical Systems Biology at Imperial College London.
+🎓 I am a DPhil student in Medical Science at the University of Oxford, based at the [MRC WIMM Centre for Computational Biology](https://www.imm.ox.ac.uk/research/units-and-centres/mrc-wimm-centre-for-computational-biology), having previously worked as a Computational Biologist and then a Junior ML Engineer at [Nucleome Therapeutics](https://nucleome.com/) and completed my Master's in Bioinformatics and Theoretical Systems Biology at Imperial College London.
 
 🧬 My primary research interests are in the applications of machine learning to multi-omics anlaysis and gene expression regulation. 
 
@@ -22,15 +22,12 @@ redirect_from:
 
 | **Skill Area**          | **Tools & Technologies**                                                                                |
 |-------------------------|--------------------------------------------------------------------------------------------------------|
-| **Languages** | Python, BASH, R, C++, HTML/CSS, SQL, Ruby|
-| **Technologies** | Unix, Gem, HPC, MySQL, AWS, ElasticSearch, Nvidia CUDA, jekyll, REST APIs|
-| **Developer Tools** | Git, GitHub, Docker, VSCode, Slurm, Streamlit, rpy2, |
-| **Machine Learning Tools**| HuggingFace, scikit-learn, tensorflow, pytorch |
-| **Bioinformatics Platforms** | GEO, SRA, HPA, UK BioBank, KEGG, Reactome, HCGA, Ensembl, Gencode, Gtex|
-| **Bioinformatics Tools** | BioConductor, Tuxedo Suite, BioMart, Batch Correction (scVI, rPCA ...), Seurat, Scanpy, ProteomeDiscoverer, MaxQuant, MetaboAnalyst, XCMS, DESeq2, CytoScape|
-
-
-
-
-
-
+| **Languages** | Python, R, BASH, SQL, C++, HTML/CSS, LaTeX |
+| **Deep Learning** | PyTorch, genomic foundation models (Enformer, Evo2), DeepHaem, CNNs, transformers, HuggingFace, transfer learning and fine-tuning, NVIDIA CUDA |
+| **Machine Learning** | scikit-learn, multivariate modelling (PathIntegrate, MOFA), AIC model selection (MuMIn), Bayesian hierarchical models (rstanarm), TensorFlow |
+| **Cloud and Compute** | AWS S3, AWS SageMaker, HPC, Slurm, Docker, Parquet, Elasticsearch |
+| **Genomics and Epigenetics** | ATAC-seq, DNase-seq, 3D genomics (Micro-Capture-C), allelic skewing, RepeatMasker, AUGUSTUS, FGENESH, BLAST suite |
+| **Multi-Omics** | Seurat, Scanpy, batch correction (Harmony, Scanorama, rPCA, scVI), DESeq2, spatial transcriptomics (squidpy, cell2location), ProteomeDiscoverer, MaxQuant, MetaboAnalyst, XCMS |
+| **Structural Biology** | AlphaFold, PyMOL, YASARA, SWISS-MODEL, Phyre2, InterPro, MolProbity |
+| **Developer Tools** | Git, GitHub, Streamlit, rpy2, REST APIs, Unix, VSCode |
+| **Databases and Resources** | GEO, SRA, Ensembl, KEGG, Reactome, ChEBI, ChEMBL, GTEx, DepMap, Human Protein Atlas, COSMIC, UK Biobank |

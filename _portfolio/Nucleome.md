@@ -1,9 +1,10 @@
 ---
-title: "ML Computational Biologist, Nucleome Therapeutics"
-start_date: "2024-10-01"
+title: "Computational Biologist, then Junior ML Engineer, Nucleome Therapeutics"
+start_date: "2024-09-01"
 end_date: "2025-10-01"
-excerpt: "<br/><img src='/images/nucleome.jpg' width='300'> \n \n <strong>Nucleome Therapeutics</strong>. Building the data pipelines behind an in-house target-information portal, fine-tuning genomic foundation models on chromatin accessibility data, and establishing allelic skewing as a functional validation method. Please click the title for more detailed information on results and outcomes."
+excerpt: "<div style=\"display:flex;gap:3%;flex-wrap:wrap;align-items:center;\"><img src='/images/nucleome.jpg' style='width:26%;height:auto;'><img src='/images/nucleome/model-architecture.png' style='width:69%;height:auto;'></div> \n \n <strong>Nucleome Therapeutics</strong>. Joined as a Computational Biologist building the data pipelines behind an in-house target-information portal, then moved into the ML team as a Junior ML Engineer, fine-tuning genomic foundation models on chromatin accessibility data and establishing allelic skewing as a functional validation method. Please click the title for more detailed information on results and outcomes."
 collection: portfolio
+category: industry
 organisation: "Nucleome Therapeutics"
 aims:
 - Replicate five external genomics data sources inside the in-house target-information portal, exactly as presented on their own web pages, in a format that loads and plots efficiently.
@@ -14,6 +15,10 @@ skills:
     tools:
       - "Parquet (row-group optimisation)"
       - "pandas"
+  - task: "Cloud Data Engineering"
+    tools:
+      - "AWS S3"
+      - "AWS SageMaker"
   - task: "Web Scraping"
     tools:
       - "BeautifulSoup (static)"
@@ -39,11 +44,15 @@ skills:
       - "Odds-ratio enrichment analysis"
 ---
 
-Work at [Nucleome Therapeutics](https://nucleome.com/), an Oxford immunology company using non-coding human
-genetics and 3D genomics to find drug targets for inflammatory disease. Two strands, presented
-to the lab in September 2025 as *Computational data challenges, solutions and lessons*.
+Work at [Nucleome Therapeutics](https://nucleome.com/), an Oxford immunology company using
+non-coding human genetics and 3D genomics to find drug targets for inflammatory disease.
 
-## Part 1: Application development
+I joined in September 2024 as a **Computational Biologist**, working on the data acquisition and
+processing behind the in-house target-information portal, and moved into the ML team in January
+2025 as a **Junior ML Engineer**. The two strands below follow that progression, and were
+presented to the lab in September 2025 as *Computational data challenges, solutions and lessons*.
+
+## Part 1: Application development (Computational Biologist)
 
 The goal was that for a given external data source, the in-house portal should reproduce its
 web-page content and plots exactly as shown, prepared so it loads and formats efficiently. Each
@@ -91,16 +100,29 @@ flat files. So the AnnData object was taken apart into its useful pieces: cell m
 converted from a sparse matrix to Parquet. The package's plots were then re-created from those
 flat files directly.
 
-## Part 2: Machine learning and functional validation
+## Part 2: Machine learning and functional validation (Junior ML Engineer)
 
 ### Fine-tuning genomic foundation models
 
-DeepHaem, the in-house architecture, predicts whether chromatin is open or closed for a given
-1 kb DNA sequence, trained on ATAC-seq and DNase-seq accessibility data. At inference it performs
+[DeepHaem](https://pubmed.ncbi.nlm.nih.gov/33046896/), the convolutional architecture behind this
+work, predicts whether chromatin is open or closed for a given 1 kb DNA sequence, trained on
+ATAC-seq and DNase-seq accessibility data. At inference it performs
 *in silico mutagenesis*: take a 1 kb window centred on a SNP, mutate the middle base to the
 alternate allele, and score both sequences. The difference, called the damage score, says whether
 the variant is predicted to close chromatin (loss of function) or open it (gain of function), per
 cell type.
+
+<img src="/images/nucleome/deephaem-architecture-slide.png" alt="DeepHaem model architecture: input sequence, five convolution blocks, classifier head" loading="lazy" width="100%">
+
+*The published DeepHaem architecture: a 1 kb input sequence through five convolution blocks, each
+Conv, ReLU, MaxPool and Dropout, into a classifier head. Published in
+[Schwessinger et al., Nature Methods 2020](https://pubmed.ncbi.nlm.nih.gov/33046896/).*
+
+<img src="/images/nucleome/model-architecture.png" alt="The same architecture with the foundation-model fine-tuning path" loading="lazy" width="100%">
+
+*The same model in schematic form, with the parallel question underneath: whether a pretrained
+transformer, fine-tuned on the same assays, does better than a convolutional network trained from
+scratch. The classifier head predicts openness separately for every cell type.*
 
 A parallel line of work asked whether a general-purpose genomic foundation model, fine-tuned on
 the same accessibility assays, could beat a bespoke architecture trained from scratch. I

@@ -1,24 +1,40 @@
 ---
 layout: archive
-title: "Projects & Relevant Coursework"
+title: "Projects"
 permalink: /projects/
 author_profile: true
 ---
 
 {% include base_path %}
 
-<p>Personal projects and university coursework, grouped by subject area. Research
-placements, my MSc thesis work and industry work live on the
+<p>Computational and laboratory projects, grouped by subject area. Research placements, my MSc
+thesis work and industry work live on the
 <a href="{{ base_path }}/portfolio/">Research Portfolio</a> page.</p>
 
-{% for category in site.project_category %}
-  {% assign title_shown = false %}
-  {% assign items = site.projects | where: "category", category[0] | sort: "date" | reverse %}
-  {% for post in items %}
-    {% unless title_shown %}
-      <h2>{{ category[1].title }}</h2><hr />
-      {% assign title_shown = true %}
-    {% endunless %}
-    {% include archive-single.html %}
+{% include category-tabs.html %}
+
+<div class="cat-tabs" role="tablist">
+  {% for category in site.project_category %}
+    {% assign n = site.projects | where: "category", category[0] | size %}
+    {% if n > 0 %}
+      <button type="button" class="cat-tab" role="tab"
+              id="tab-{{ category[0] }}" aria-controls="panel-{{ category[0] }}"
+              aria-selected="{% if forloop.first %}true{% else %}false{% endif %}">
+        {{ category[1].title }} <span class="cat-count">{{ n }}</span>
+      </button>
+    {% endif %}
   {% endfor %}
+</div>
+
+{% for category in site.project_category %}
+  {% assign items = site.projects | where: "category", category[0] | sort: "date" | reverse %}
+  {% if items.size > 0 %}
+    <section class="cat-panel" role="tabpanel"
+             id="panel-{{ category[0] }}" aria-labelledby="tab-{{ category[0] }}">
+      <h2 class="cat-panel-title">{{ category[1].title }}</h2>
+      {% for post in items %}
+        {% include archive-single.html %}
+      {% endfor %}
+    </section>
+  {% endif %}
 {% endfor %}
