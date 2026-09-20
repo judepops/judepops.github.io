@@ -2,7 +2,7 @@
 title: "Elucidating Spatial Cell Composition of Neuroblastoma (Group Project)"
 start_date: "2024-01-01"
 end_date: "2024-03-01"
-excerpt: "<br/><img src='/images/cisbio_1.png'> \n \n <strong>Figure 2.1:</strong> Initial, Single-cell RNA-Seq Workflow of the project. \n <br/><img src='/images/cisbio_2.png'> \n \n <strong>Figure 2.2:</strong> Secondary, Single-cell Spatial RNA-seq Workflow of the project. Please click the title for more detailed information on results and outcomes."
+excerpt: "<div style=\"display:flex;gap:2%;flex-wrap:wrap;align-items:flex-start;\"><img src='/images/cisbio_1.png' style='width:49%;height:auto;'><img src='/images/cisbio_2.png' style='width:49%;height:auto;'></div> \n \n <strong>Figure 2.1:</strong> single-cell RNA-seq workflow. <strong>Figure 2.2:</strong> single-cell spatial RNA-seq workflow. Please click the title for more detailed information on results and outcomes."
 
 collection: portfolio
 category: postgrad

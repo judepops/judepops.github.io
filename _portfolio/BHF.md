@@ -2,7 +2,7 @@
 title: "Integrative Multi-omics Analysis of Human Carotid Plaque Reveals Protective Smooth Muscle Cell Phenotypes"
 start_date: "2023-01-01"
 end_date: "2023-10-01"
-excerpt: "<br/><img src='/images/atherosclerosis.jpg'> \n \n <strong>Figure 3:</strong> General Workflow of the project. Please click the title for more detailed information on results and outcomes."
+excerpt: "<img src='/images/atherosclerosis.jpg' style='width:100%;max-width:520px;height:auto;'> \n \n <strong>Figure 3:</strong> General Workflow of the project. Please click the title for more detailed information on results and outcomes."
 collection: portfolio
 category: undergrad
 aims:

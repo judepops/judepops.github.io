@@ -2,7 +2,7 @@
 title: "Multi-Omics Pathway-based Data Integration Using Machine Learning and Large Language Models (LLMs)"
 start_date: "2024-03-01"
 end_date: "2024-10-01"
-excerpt: "<br/><img src='/images/multi_omics.png'> \n \n <strong>Figure 1:</strong> General Workflow of the project. Please click the title for more detailed information on results and outcomes."
+excerpt: "<img src='/images/multi_omics.png' style='width:100%;max-width:520px;height:auto;'> \n \n <strong>Figure 1:</strong> General Workflow of the project. Please click the title for more detailed information on results and outcomes."
 collection: portfolio
 category: postgrad
 aims:     
