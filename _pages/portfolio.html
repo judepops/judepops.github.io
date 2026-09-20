@@ -7,6 +7,16 @@ author_profile: true
 
 {% include base_path %}
 
+<style>
+  /* Small figure floated beside the intro text. Kept here, above the prose, so
+     that editing the paragraphs below cannot remove it. */
+  .omics-figure { float: right; width: 150px; max-width: 34%; margin: 0.2em 0 1em 1.5em; }
+  @media (max-width: 600px) {
+    .omics-figure { float: none; display: block; width: 50%; max-width: 50%; margin: 0 auto 1em; }
+  }
+  .omics-clear { clear: both; }
+</style>
+
 <p>My research has centred on <strong>multi-omics</strong>: using machine learning to combine
 measurements that do not naturally fit together.</p>
 
