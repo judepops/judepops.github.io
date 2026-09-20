@@ -2,7 +2,7 @@
 title: "Computer Vision Prototyping for Intra-Operative AI"
 start_date: "2019-08-01"
 end_date: "2019-09-01"
-excerpt: "<img src='/images/touch_surgery.jpg' width='200'> \n \n <strong>Touch Surgery</strong>, acquired by Medtronic for $300M five months later. Pre-training and testing computer vision models for intra-operative video, in support of the company's remote and tele-mentored surgery work."
+excerpt: "<div style=\"display:flex;gap:3%;flex-wrap:wrap;align-items:center;\"><img src='/images/touch_surgery.jpg' style='width:22%;height:auto;'><img src='/images/touch-surgery-simulations.png' style='width:40%;height:auto;'></div> \n \n <strong>Touch Surgery</strong>, acquired by Medtronic for $300M five months later. Pre-training and testing computer vision models for intra-operative video, in support of the company's remote and tele-mentored surgery work."
 collection: portfolio
 category: industry
 organisation: "Touch Surgery (acquired by Medtronic, February 2020)"
@@ -27,7 +27,13 @@ skills:
 A summer internship as **AI Surgical Devices Intern** at Touch Surgery in London, five months
 before the company was acquired by **Medtronic for $300M** in February 2020.
 
-<img src="/images/touch_surgery.jpg" alt="Touch Surgery" loading="lazy" width="200">
+<img src="/images/touch_surgery.jpg" alt="Touch Surgery" loading="lazy" width="180">
+
+<img src="/images/touch-surgery-simulations.png" alt="Touch Surgery interactive surgical simulations on tablet and phone" loading="lazy" style="width:100%;max-width:460px;height:auto;">
+
+*The product the computer vision work sat alongside: interactive, step-by-step surgical
+simulations with annotated anatomy. The same understanding of what is happening in a procedure,
+and where the anatomy is, is what an intra-operative model has to recover from video.*
 
 
 ## The problem
