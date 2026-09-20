@@ -27,6 +27,9 @@ skills:
 A summer internship as **AI Surgical Devices Intern** at Touch Surgery in London, five months
 before the company was acquired by **Medtronic for $300M** in February 2020.
 
+<img src="/images/touch_surgery.jpg" alt="Touch Surgery" loading="lazy" width="200">
+
+
 ## The problem
 
 Touch Surgery's ambition was **remote and tele-mentored surgery**: a senior surgeon guiding or

@@ -7,44 +7,33 @@ author_profile: true
 
 {% include base_path %}
 
-<p>My research follows one through-line: <strong>multi-omics</strong>, and using machine
-learning to combine measurements that do not naturally fit together.</p>
-
-<style>
-  /* Small, floated beside the intro text; stacks and centres on narrow screens. */
-  .omics-figure { float: right; width: 170px; max-width: 38%; margin: 0.2em 0 1em 1.5em; }
-  @media (max-width: 600px) {
-    .omics-figure { float: none; display: block; width: 55%; max-width: 55%; margin: 0 auto 1em; }
-  }
-  .omics-clear { clear: both; }
-</style>
+<p>My research has centred on <strong>multi-omics</strong>: using machine learning to combine
+measurements that do not naturally fit together.</p>
 
 <img class="omics-figure" src="{{ base_path }}/images/Omics.png"
      alt="The omics layers, from genome to metabolome">
 
-<p>It began with <a href="{{ base_path }}/portfolio/KURF/">genomics and splicing</a>, in a
-summer project that grew out of an article I wrote on
+<p>It started with <a href="{{ base_path }}/portfolio/KURF/">genomics and splicing</a>, in a
+summer project that came out of an article I wrote on
 <a href="{{ base_path }}/publication/2021-11-15-paper-title-number-4">alternative splicing and
 neurogenesis</a>. My undergraduate thesis added
-<a href="{{ base_path }}/portfolio/BHF/">transcriptomics and proteomics</a>; my postgraduate year
-added <a href="{{ base_path }}/portfolio/CISBIO/">spatial transcriptomics</a> and then
-<a href="{{ base_path }}/portfolio/NIHR/">metabolomics</a>, the layer that resists integration
-most.</p>
+<a href="{{ base_path }}/portfolio/BHF/">transcriptomics and proteomics</a>, and my postgraduate
+year added <a href="{{ base_path }}/portfolio/CISBIO/">spatial transcriptomics</a> and then
+<a href="{{ base_path }}/portfolio/NIHR/">metabolomics</a>, which is the hardest layer to
+integrate.</p>
 
-<p>The methods moved with the data. That metabolomics work became a
+<p>That metabolomics work became a
 <a href="https://github.com/cwieder/PathIntegrate/graphs/contributors" target="_blank">Python
-package</a> built on <strong>multivariate machine learning</strong>, modelling many correlated
-pathway features together rather than testing them one at a time. At
-<a href="{{ base_path }}/portfolio/Nucleome/">Nucleome Therapeutics</a> that became
-<strong>deep learning</strong>: fine-tuning genomic foundation models on chromatin accessibility,
-with the data engineering underneath it on AWS S3 and SageMaker.</p>
+package</a> using <strong>multivariate machine learning</strong> to model pathway features
+together. At <a href="{{ base_path }}/portfolio/Nucleome/">Nucleome Therapeutics</a> I moved to
+<strong>deep learning</strong>, fine-tuning genomic foundation models on chromatin accessibility,
+with the data engineering on AWS S3 and SageMaker.</p>
 
-<p>The <a href="{{ base_path }}/portfolio/Oxford/">DPhil</a> works a layer further up, in the
-<strong>epigenome</strong>, and draws on all of it: machine learning, deep learning and
-multi-omics applied to gene regulation. Where the industry work was applied, this is the research
-side of the same question, and it is a big-data problem in principle: an assay that resolves
-regulatory contacts to the base pair would, scaled across roughly 20,000 genes in the CD4+ T cell
-genome, give training data of a kind these models have not had.</p>
+<p>My <a href="{{ base_path }}/portfolio/Oxford/">DPhil</a> works a layer further up, in the
+<strong>epigenome</strong>, and uses all of it: machine learning, deep learning and multi-omics
+applied to gene regulation. The industry work was applied; this is the research side of the same
+question. Scaled across roughly 20,000 genes in the CD4+ T cell genome, an assay that resolves
+regulatory contacts to the base pair would give these models much better training data.</p>
 
 <p>Grouped by stage below. Personal and laboratory projects are on the
 <a href="{{ base_path }}/projects/">Projects</a> page, and venture capital work on the
