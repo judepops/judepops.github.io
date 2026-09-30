@@ -9,7 +9,7 @@ redirect_from:
 ---
 
 
-🎓 I am a DPhil student in Medical Science at the University of Oxford, based at the [MRC WIMM Centre for Computational Biology](https://www.imm.ox.ac.uk/research/units-and-centres/mrc-wimm-centre-for-computational-biology), having previously worked as a Computational Biologist and then a Junior ML Engineer at [Nucleome Therapeutics](https://nucleome.com/) and completed my MRes in Bioinformatics and Theoretical Systems Biology at Imperial College London.
+🎓 I am a DPhil student in Computational Biology at the University of Oxford, based at the [MRC WIMM Centre for Computational Biology](https://www.imm.ox.ac.uk/research/units-and-centres/mrc-wimm-centre-for-computational-biology), having previously worked as a Computational Biologist and then a Junior ML Engineer at [Nucleome Therapeutics](https://nucleome.com/) and completed my MRes in Bioinformatics and Theoretical Systems Biology at Imperial College London.
 
 🧬 My primary research interests are in the applications of machine learning to multi-omics anlaysis and gene expression regulation. 
 
